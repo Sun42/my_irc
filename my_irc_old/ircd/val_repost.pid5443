@@ -1,0 +1,35 @@
+==5443== Memcheck, a memory error detector for x86-linux.
+==5443== Copyright (C) 2002-2004, and GNU GPL'd, by Julian Seward.
+==5443== Using valgrind-2.1.0, a program supervision framework for x86-linux.
+==5443== Copyright (C) 2000-2004, and GNU GPL'd, by Julian Seward.
+==5443== 
+==5443== My PID = 5443, parent PID = 4913.  Prog and args are:
+==5443==    ./ircd
+==5443== Estimated CPU clock rate is 1276 MHz
+==5443== For more details, rerun with: -v
+==5443== 
+==5443== Syscall param select(timeout) contains uninitialised or unaddressable byte(s)
+==5443==    at 0x3C0F875F: (within /lib/libc.so.6)
+==5443==    by 0x8049044: ircd_mainloop (ircd_mainloop.c:9)
+==5443==    by 0x8048B55: main (main.c:15)
+==5443==  Address 0x4FFFE9B4 is on thread 1's stack
+==5443== 
+==5443== ERROR SUMMARY: 4 errors from 1 contexts (suppressed: 0 from 0)
+==5443== malloc/free: in use at exit: 4096 bytes in 1 blocks.
+==5443== malloc/free: 60 allocs, 59 frees, 20162 bytes allocated.
+==5443== For counts of detected errors, rerun with: -v
+==5443== searching for pointers to 1 not-freed blocks.
+==5443== checked 1283004 bytes.
+==5443== 
+==5443== 
+==5443== 4096 bytes in 1 blocks are still reachable in loss record 1 of 1
+==5443==    at 0x3C032183: malloc (in /usr/local/lib/valgrind/vgpreload_memcheck.so)
+==5443==    by 0x3C0F69E1: __smakebuf (in /lib/libc.so.6)
+==5443==    by 0x3C0F68AC: __swsetup (in /lib/libc.so.6)
+==5443==    by 0x3C0ECA4E: __vfprintf (in /lib/libc.so.6)
+==5443== 
+==5443== LEAK SUMMARY:
+==5443==    definitely lost: 0 bytes in 0 blocks.
+==5443==    possibly lost:   0 bytes in 0 blocks.
+==5443==    still reachable: 4096 bytes in 1 blocks.
+==5443==         suppressed: 0 bytes in 0 blocks.

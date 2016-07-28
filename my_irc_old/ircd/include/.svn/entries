@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2006-07-03T07:01:28.729345Z"
+   url="svn://localhost/my_irc/trunk/ircd/include"
+   last-author="flandr_l"
+   kind="dir"
+   uuid="ad302d4e-600a-db11-85f8-0050709235bd"
+   repos="svn://localhost/my_irc"
+   revision="2"/>
+<entry
+   committed-rev="1"
+   name="libhash.h"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="3bc00ed9131495650287ce14225ac001"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="conf_parser.h"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="65fd6cd40c666ec715233e6e83abe567"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="readlib.h"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="c5207aca8a127fbf70d6e1da6bcc7ab9"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="replies.h"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="6d71345d5c82735ad5b1d71e1e364844"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+</wc-entries>

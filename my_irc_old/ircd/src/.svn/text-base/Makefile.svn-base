@@ -1,0 +1,40 @@
+
+NAME	=	ircd
+
+SRC	= \
+		main.c			\
+		init_ircd.c		\
+		close_ircd.c		\
+		init_connection.c
+
+OBJ	=	$(SRC:.c=.o)
+
+CC	=	gcc
+
+IPATH	=	-I. -I../include
+
+LIB	=	-L../lib -lparse_conf_$(OSTYPE)_$(MACHTYPE) -lread_file_$(OSTYPE)_$(MACHTYPE) -lhash_$(OSTYPE)_$(MACHTYPE) -lutil
+
+CFLAGS	=	-O2 $(IPATH) -Wall -W -Werror -ansi -pedantic -D$(OSTYPE) -ggdb
+
+$(NAME) :	$(OBJ)
+		$(CC) -o $(NAME) $(OBJ) $(LIB)
+		cp $(NAME) ..
+
+all	:	$(NAME)
+
+clean	:
+		rm -f *.o
+		rm -f *~
+		rm -f \#*\#
+
+fclean	:	clean
+		rm -f $(NAME)
+
+re	:	fclean all
+
+exec	:	re
+		./$(NAME) $(ARG)
+
+norme	:
+		$(HOME)/mbin/norme -h $(SRC)

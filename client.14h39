@@ -1,0 +1,49 @@
+#include <stdlib.h>
+#include <gtk/gtk.h>
+#include <string.h>
+#include "client.h"
+
+int		main(int ac, char **av)
+{
+  init_cli(ac, av);
+  return (EXIT_SUCCESS);
+}
+
+void		init_cli(int argc , char **argv)
+{
+  t_main	*main_win;
+
+  
+  gtk_init(&argc,&argv);
+  sock_init();
+  main_win = g_malloc(sizeof(t_main));
+  create_elems((gpointer)main_win);
+  place_elem((gpointer)main_win);   
+  active_events((gpointer)main_win);
+  gtk_widget_show_all(main_win->win);
+  gtk_main();
+  g_free(main_win);
+}
+
+void		send_msg(GtkWidget *entry, gpointer data)
+{
+  const	 gchar	*text;
+  t_main	*main_win;
+  char		*cmd;
+  
+  /* Recuperation de data */
+  main_win = (t_main*) data;
+  /* Recuperation du texte contenu dans le GtkEntry */
+  text = gtk_entry_get_text(GTK_ENTRY(main_win->entry));
+  cmd = strdup(text);
+  /* Modification du texte contenu dans le GtkLabel */
+  gtk_label_set_text(GTK_LABEL(main_win->label), text);
+  gtk_entry_set_text(GTK_ENTRY(main_win->entry), "");
+  parse_cmd(cmd);
+  free(cmd);
+}
+
+void	parse_cmd(char *cmd)
+{
+  printf("%s \n", cmd);
+}

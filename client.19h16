@@ -1,0 +1,48 @@
+#include <stdlib.h>
+#include <gtk/gtk.h>
+#include "client.h"
+
+int		main(int ac, char **av)
+{
+  init_cli(ac, av);
+  return (EXIT_SUCCESS);
+}
+
+
+void		init_cli(int argc , char **argv)
+{
+  t_main	*main_win;
+
+
+  gtk_init(&argc,&argv);
+  main_win = g_malloc(sizeof(t_main));
+  main_win->win = mk_window(600, 600, TITLE);
+  /*main_win = place_elem(main_win);*/
+  /* Creation de la GtkBox verticale */
+  main_win->vbox = gtk_vbox_new(FALSE, 16);
+  /* Ajout de la GtkVBox dans la fenetre */
+  gtk_container_add(GTK_CONTAINER(main_win->win), main_win->vbox);
+  /* Creation des boutons */
+  main_win->btquit = gtk_button_new_with_label("quit");
+  main_win->btquit = gtk_button_new_from_stock(GTK_STOCK_QUIT);  
+  g_signal_connect(G_OBJECT(main_win->btquit), "clicked", G_CALLBACK(gtk_main_quit), NULL);
+  
+  main_win->btsend = gtk_button_new_with_label("send");
+  g_signal_connect(G_OBJECT(main_win->btsend), "clicked", G_CALLBACK(on_update),  (gpointer*) main_win);  
+  /* Ajout du label dans la GtkVBox */
+  main_win->label = gtk_label_new(NULL);
+  gtk_box_pack_start(GTK_BOX(main_win->vbox), main_win->label, TRUE, FALSE, 60);
+  /* Creation de la box horizontale */
+  main_win->hbox = gtk_hbox_new(TRUE, 0);
+  /* Ajout de la GtkHBox dans la GtkVBox */
+  gtk_box_pack_start(GTK_BOX(main_win->vbox), main_win->hbox, FALSE, TRUE, 20);
+  /* Ajout dbouton et zone de saisie */
+  main_win->entry = gtk_entry_new();
+  g_signal_connect(G_OBJECT(main_win->entry), "activate", G_CALLBACK(on_update), (gpointer) main_win);
+  gtk_box_pack_start(GTK_BOX(main_win->hbox), main_win->entry, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(main_win->hbox), main_win->btsend, TRUE, TRUE, 60);
+  gtk_box_pack_start(GTK_BOX(main_win->hbox), main_win->btquit, TRUE, TRUE, 60);
+  gtk_widget_show_all(main_win->win);
+  gtk_main();
+  g_free(main_win);
+}

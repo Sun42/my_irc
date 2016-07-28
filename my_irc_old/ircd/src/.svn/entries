@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2006-07-27T04:10:49.372057Z"
+   url="svn://localhost/my_irc/trunk/ircd/src"
+   last-author="flandr_l"
+   kind="dir"
+   uuid="ad302d4e-600a-db11-85f8-0050709235bd"
+   repos="svn://localhost/my_irc"
+   revision="2"/>
+<entry
+   committed-rev="1"
+   name="ircd_mainloop.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="5be4d547ee8b91ad69a72a415cc37c2f"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="do_select.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="fedfb4ce81bca88080dc45d269515be2"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="init_connection.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="37e6df232151ef18cf74f53cc1d44fc1"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="init_ircd.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="c25494fd0d4d08decd78ca636c82dbd5"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="2"
+   name="main.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-27T04:10:49.372057Z"
+   checksum="3a9b4a6562af950de4179626630c2e8b"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="close_ircd.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="8c10877d9eaa1ddedb4618a552540542"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="2"
+   name="ircd.h"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-27T04:10:49.372057Z"
+   checksum="36abf4a5f91e4c17f195ca0a4058b54a"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Makefile"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="70773580efc9c91bd0f9d57ce5582f76"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+</wc-entries>

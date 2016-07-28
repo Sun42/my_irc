@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2006-07-27T04:10:49.372057Z"
+   url="svn://localhost/my_irc/trunk/ircd/lib/conf_parser"
+   last-author="flandr_l"
+   kind="dir"
+   uuid="ad302d4e-600a-db11-85f8-0050709235bd"
+   repos="svn://localhost/my_irc"
+   revision="2"/>
+<entry
+   committed-rev="1"
+   name="parse_conf.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="eedd15973d828729ef8e7a6371b7e6fc"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="test.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="31d2f7270016caf6c07a5278a2651ac5"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="conf_parser.h"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="65fd6cd40c666ec715233e6e83abe567"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="get_var_name.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="7f351753bbf894086e2f6cb958119393"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="libparse_conf_FreeBSD_i386.a"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="a8a4e0da0a7ea60c8b665c8e44b21fcb"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="misc_def_funcs.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="210ff5ff1b3be6fb967f64b29607d1a5"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="clean_str.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="07c2bcd712d30151324cacc25118aac6"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="get_def_funcs.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="9d4c1847f9a6402ad50e27ae4d39be79"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Makefile"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="e978dabe6851b7188d570cad4eec2ea4"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="init_parse.c"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="4d95547e4e7f57f680d8903335be0b40"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+<entry
+   committed-rev="2"
+   name="libparse_conf_FreeBSD_.a"
+   text-time="2006-08-09T16:04:16.000000Z"
+   committed-date="2006-07-27T04:10:49.372057Z"
+   checksum="3c1bfc247d64336d99dce96ae0bd4261"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:16.000000Z"/>
+</wc-entries>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2006-07-27T04:10:49.372057Z"
+   url="svn://localhost/my_irc/trunk/ircd/lib/read_lib"
+   last-author="flandr_l"
+   kind="dir"
+   uuid="ad302d4e-600a-db11-85f8-0050709235bd"
+   repos="svn://localhost/my_irc"
+   revision="2"/>
+<entry
+   committed-rev="1"
+   name="test.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="fdc10b62a8cfca6414c27b9ebfda8734"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="open_file.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="e16cc0baa9eba75ed39063e6d706b33f"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="libread_file_FreeBSD_i386.a"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="886db5433f0e4f95f2296af150f703ee"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="blah.txt"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="30c0757848dd3111aac71dc924675385"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="close_file.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="fa63e3fd73b7eaf36961b19c9e561a90"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="get_line.c"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="7d7e27d1c4be414a2cb5bd0396fbde38"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="readlib.h"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="c5207aca8a127fbf70d6e1da6bcc7ab9"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="2"
+   name="libread_file_FreeBSD_.a"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-27T04:10:49.372057Z"
+   checksum="945c1e1d44bb6640a3664285a1f37805"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Makefile"
+   text-time="2006-08-09T16:04:17.000000Z"
+   committed-date="2006-07-03T07:01:28.729345Z"
+   checksum="de1d94d3b50c03107dfe2da193ea686a"
+   last-author="flandr_l"
+   kind="file"
+   prop-time="2006-08-09T16:04:17.000000Z"/>
+</wc-entries>

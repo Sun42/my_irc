@@ -1,0 +1,75 @@
+#ifndef __SERVER_H_
+#define __SERVER_H_
+
+#include <sys/types.h>
+#include <sys/socket.h>
+
+
+
+#include <sys/time.h>
+
+#include <netinet/in.h>
+
+
+#define INVALID_SOCKET -1
+#define SOCKET_ERROR -1
+#define closesocket(s) close(s)
+typedef int SOCKET;
+typedef struct sockaddr_in SOCKADDR_IN;
+typedef struct sockaddr SOCKADDR;
+typedef struct in_addr IN_ADDR;
+
+#define CRLF "\r\n"
+#define PORT 1977
+#define MAX_CLIENTS 100
+
+#define BUF_SIZE 1024
+
+typedef struct
+{
+  int		sock;
+  char		name[BUF_SIZE];
+  int		chanel;
+}Client;
+
+typedef struct		s_listc
+{
+  struct s_listc	*next;
+  SOCKET		sock;
+  char			*name;
+  int			channel;
+}			t_listc;
+
+typedef struct		s_listh
+{
+  struct s_listh	*next;
+  int			num_chan;
+  char			*name;
+}			t_listh;
+
+/* manage_connexion */
+int		init_connection(void);
+int		end_connection(int sock);
+void		init_socket(t_listc *first, fd_set *rdfs, SOCKET sock);
+void		select_socket(t_listc *firstc, t_listh *firsth,fd_set *rdfs);
+
+/* manage_listc */
+void		add_listc(t_listc *first, int new_sock, char *name);
+t_listc		*init_listc(void);
+t_listh		*init_listh(void);
+t_listh		*add_listh(t_listh *first, char *name);
+
+void		show_listh(t_listh *first);
+void		show_listc(t_listc *first);
+
+/* manage_client */
+void		remove_all_client(t_listc *first);
+void		disconnect_client(t_listc *prev, t_listc *cur);
+int		add_new_client(t_listc *listc, SOCKET sock, fd_set *rdfs);
+int		read_client(SOCKET sock, char *buffer);
+int		write_client(SOCKET sock, const char *buffer);
+
+/* mylib */
+char		*xstrdup(char *str);
+
+#endif /* __SERVER_H_ */

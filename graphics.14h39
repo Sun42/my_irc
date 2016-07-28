@@ -1,0 +1,76 @@
+#include <gtk/gtk.h>
+#include "client.h"
+
+GtkWidget	*mk_window(int h, int w, char *title)
+{
+  GtkWidget	*win;
+
+  win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title(GTK_WINDOW(win), title);
+  gtk_window_set_default_size(GTK_WINDOW(win), h, w);
+  gtk_container_set_border_width(GTK_CONTAINER(win), 10);
+  g_signal_connect(G_OBJECT(win), "destroy",\
+		   G_CALLBACK(gtk_main_quit), NULL);
+  return (win);
+}
+/* Fonction callback execute lors du signal "activate" */
+void		on_update(GtkWidget *entry, gpointer data)
+{
+  const gchar	*text;
+  t_main	*main_win;
+    
+  /* Recuperation de data */
+  main_win = (t_main*) data;
+  /* Recuperation du texte contenu dans le GtkEntry */
+  text = gtk_entry_get_text(GTK_ENTRY(main_win->entry));
+  /* Modification du texte contenu dans le GtkLabel */
+  gtk_label_set_text(GTK_LABEL(main_win->label), text);
+}
+
+void		place_elem(gpointer data)
+{
+  t_main	*main_win;
+
+  main_win = (t_main *)data;
+  gtk_container_add(GTK_CONTAINER(main_win->win),\
+		    main_win->vbox);
+  gtk_box_pack_start(GTK_BOX(main_win->vbox),\
+		     main_win->label, TRUE, FALSE, 60);
+  gtk_box_pack_start(GTK_BOX(main_win->vbox),\
+		     main_win->hbox, FALSE, TRUE, 20);
+  gtk_box_pack_start(GTK_BOX(main_win->hbox),\
+		     main_win->entry, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(main_win->hbox),\
+		     main_win->btsend, TRUE, TRUE, 60);
+  gtk_box_pack_start(GTK_BOX(main_win->hbox),\
+		     main_win->btquit, TRUE, TRUE, 60);
+}
+
+void		active_events(gpointer data)
+{
+  t_main	*main_win;
+
+  main_win = (t_main *)data;
+  g_signal_connect(G_OBJECT(main_win->btquit), "clicked",\
+		   G_CALLBACK(gtk_main_quit), NULL);
+  g_signal_connect(G_OBJECT(main_win->btsend), "clicked",\
+		   G_CALLBACK(send_msg), (gpointer) main_win);
+  g_signal_connect(G_OBJECT(main_win->entry), "activate",\
+		   G_CALLBACK(on_update), (gpointer) main_win);
+}
+
+void		create_elems(gpointer data)
+{
+  t_main	*main_win;
+
+  main_win = (t_main *)data;
+  main_win->win = mk_window(600, 600, TITLE);
+  main_win->vbox = gtk_vbox_new(FALSE, 16);
+  main_win->btquit = gtk_button_new_with_label("quit");
+  main_win->btquit = gtk_button_new_from_stock(GTK_STOCK_QUIT);
+  main_win->btsend = gtk_button_new_with_label("send");
+  main_win->label = gtk_label_new(NULL);
+  main_win->hbox = gtk_hbox_new(TRUE, 0);
+  main_win->entry = gtk_entry_new();
+}
+
